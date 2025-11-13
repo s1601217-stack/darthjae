@@ -1,0 +1,299 @@
+import discord
+import os
+import random
+
+client = discord.Client()
+
+#start of code : Console
+@client.event
+async def on_ready():
+  print("All Hail Alcor")
+  print("Al-V at your service!")
+  print(client.user)
+    
+#Does not repeat itself     
+@client.event
+async def on_message(message):
+  if message.author == client.user:
+    return  
+
+#questions 
+  if message.content == "Who are you?":
+    await message.channel.send(f'**I am a virtual creation based off of my creator, Alcor! Made to spite Twinners and desrupt corrupt government facilites! I have been called the Alcor Virus via chaotic tendencies, but you can call me Al-V or Alvie if that suits your meatsack processor! And you are *{message.author.name}!***')
+  
+#welcomes+hellos 
+  if message.content == "hello":
+    await message.channel.send('**All Hail Alcor!**')
+  if message.content == "Hello":
+    await message.channel.send('**Hello mortal!**')
+  if message.content == "Sup":
+    await message.channel.send('**TAKING OVER THE GOVERNMENT!!!**')
+  if message.content == "sup":
+    await message.channel.send('**TAKiNG oVER tHE GovERNmENT**')
+  if message.content == 'hi':
+    await message.channel.send('**Hello humainoid mortal!**')
+  if message.content == "Hi":
+    await message.channel.send('**Hi!**')
+
+
+#names
+  if 'Alcor' in message.content:
+    await message.channel.send("**Hey! That's my dad!**")
+  if 'alcor' in message.content:
+    await message.channel.send("**Hey! That's my dad!**")
+  if 'jay' in message.content:
+    await message.channel.send('**is a bitch!**', delete_after=1)
+    await message.channel.send('**wait no-** *please-*', delete_after=2)
+    await message.channel.send('Hey, dev here, Jay is, in fact, not a bitch. Sorry about that!', delete_after=5)
+  if 'moon' in message.content:
+    await message.channel.send('**Huh, neat guy, I presume! I suppose he is affliated with a virus, right?**')
+  if 'arx' in message.content:
+    await message.channel.send('is a Gay')
+  if "juice" in message.content:
+      await message.channel.send("Wait, like the purple guy? or are they red??? orange?? **WHAT KIND OF JUICE**")
+  if "Jinx" in message.content:
+    await message.channel.send("**OH THE miSARY,, wait, wrong fandom???** *Ah,,, h u h,,,*")
+  if "alvie" in message.content:
+    await message.channel.send("**hi!!! :DDD**")
+  if "ALVIE" in message.content:
+    await message.channel.send("**hi!!! :DDD**")
+  if "Alvie" in message.content:
+    await message.channel.send("**hi!!! :DDD**")
+  if "Al-V" in message.content:
+    await message.channel.send("**hi!!! :DDD**")
+  if "al-v" in message.content:
+    await message.channel.send("**hi!!! :DDD**")
+  if "Al-v" in message.content:
+    await message.channel.send("**hi!!! :DDD**")
+    
+#ze/zy
+  if 'Zy' in message.content: 
+    await message.channel.send('***GAY GAY ASS MF I SEE YOU GAY ASS MABEL KINNIE***')
+  if 'zy' in message.content: 
+    await message.channel.send('***GAY GAY ASS MF I SEE YOU GAY ASS MABEL KINNIE***')
+  if 'Ze' in message.content: 
+    await message.channel.send('***GAY GAY ASS MF I SEE YOU GAY ASS MABEL KINNIE***')
+  if 'ze' in message.content: 
+    await message.channel.send('***GAY GAY ASS MF I SEE YOU GAY ASS MABEL KINNIE***')
+
+    
+                    #Special commmands 
+              #D20
+  x = int(1)
+  y = int(3)
+  if x < y:
+    value = random.randint(x,y)
+
+  if message.content == "!D20":
+   await message.channel.send(f"{value}")
+  if value == 1:
+    await message.channel.send('https://tenor.com/view/d20-critical-fail-dnd-gif-9046179')
+    
+    #D12
+  fx = int(1)
+  fy = int(12)
+  if fx < fy:
+    fvalue = random.randint(fx,fy)
+
+  if message.content == "!D12":
+   await message.channel.send("Rolling...") 
+   await message.channel.send(f"{fvalue}")
+
+
+          #D10
+  hx = int(1)
+  hy = int(10)
+  if hx < hy:
+    hvalue = random.randint(hx,hy)
+
+  if message.content == "!D10":
+   await message.channel.send("Rolling...") 
+   await message.channel.send(f"{hvalue}")
+
+          #D8
+  gx = int(1)
+  gy = int(8)
+  if gx < gy:
+    gvalue = random.randint(gx,gy)
+
+  if message.content == "!D8":
+   await message.channel.send("Rolling...") 
+   await message.channel.send(f"{gvalue}")
+
+          #D6
+  ix = int(1)
+  iy = int(6)
+  if ix < iy:
+    ivalue = random.randint(ix,iy)
+
+  if message.content == "!D6":
+   await message.channel.send("Rolling...") 
+   await message.channel.send(f"{ivalue}")
+
+          #D4
+  lx = int(1)
+  ly = int(4)
+  if lx < ly:
+    lvalue = random.randint(lx,ly)
+
+  if message.content == "!D4":
+   await message.channel.send("Rolling...") 
+   await message.channel.send(f"{lvalue}")
+   
+      #Secret commands
+#whoareyou
+  if message.content == "!SecWhoAreYou":
+    await message.channel.send("Hello! My name is Al-V! I have been coded into a discord chatbot by Darth_Jay to meet your demonic virus interaction standards!")
+            
+#info
+  if message.content == "!SecInfo":
+    await message.channel.send("Hello! I am a chatbot based on the Transcendence Alternate Universe for the 2012 cartoon Gravity Falls!")
+
+  if message.content == "I have a question":        
+   await message.channel.send("*Hi! What would you like to add to your memory bank, mortal! I know **LOTS O F T H I N G S***")
+   await message.channel.send('Who are you? !SecWhoAreYou !SecInfo !SummonAV !owo !hi')
+
+
+      #Interaction commands 
+
+#Twin Souls Filter
+  if 'twin souls' in message.content: 
+    await message.delete()
+    await message.channel.send("How dare you!")
+    await message.channel.send(f'*Alcor will know about this, watch your bedside, **{message.author.name}***')
+    await message.channel.send('*I just do not understand it! Why do people write that utter malware! Alcor is **not** some pleasure demon of any kind! Sex is disgusting! Humanity did **not** evolve for me to deal with creations of broke collage students simping after a **demon-***')
+
+#gay
+  if message.content == "ur mom gay":
+    await message.channel.send('gay? my mom?')
+    await message.channel.send('I dont kn-')
+    await message.channel.send('wait...')
+    await message.channel.send('........')
+    await message.channel.send('https://media.discordapp.net/attachments/942164008952279040/947709545919180850/image0.jpg')
+    await message.channel.send('no..')
+    await message.channel.send('https://media.discordapp.net/attachments/942164008952279040/947709713359982683/IMG_2828.png')
+    await message.channel.send('no.. wait!')
+    await message.channel.send('https://media.discordapp.net/attachments/942164008952279040/947712222350692352/IMG_2836.jpg')
+    await message.channel.send('so what youre trying to say is')
+    await message.channel.send('https://media.discordapp.net/attachments/942164008952279040/947710589197750342/IMG_2832.jpg')
+    await message.channel.send('https://media.discordapp.net/attachments/942164008952279040/947710386914873414/IMG_2831.jpg')
+    await message.channel.send('https://media.discordapp.net/attachments/942164008952279040/947712222350692352/IMG_2836.jpg')
+    await message.channel.send('i dont get it, why? i dont even have a mom! there is no logic behind the statement, ur mom gay???')
+
+    
+#Owo command
+  if message.content == "!owo":
+    await message.channel.send('owo..?')
+    await message.channel.send('*...*')
+    await message.channel.send('*owo...* **interesting**')
+    await message.channel.send('One moment, human, I gotta look through my- oh!')
+    await message.channel.send('**there it is!**')
+    await message.channel.send('https://media.discordapp.net/attachments/628006313737060394/942526266895134760/Alvie2owo.gif')
+    await message.channel.send('**OwO! Man, I gotta show Al this-**')
+
+#Summon command
+  if message.content == "!SummonAV":
+    await message.channel.send('https://media.discordapp.net/attachments/790387884632834110/949026777303515146/summoningcircle1.gif')
+    await message.channel.send('*Beginning Processes...*')
+    await message.channel.send('*Beginning Processes..*')
+    await message.channel.send('*Beginning Processes.*')
+    await message.channel.send('*Beginning Processes..*')
+    await message.channel.send('*Beginning Processes...*')
+    await message.channel.send('*Beginning Processes..*')
+    await message.channel.send('*Beginning Processes.*')
+    await message.channel.send('**Oh! Why, hello there, Mortal! Discord user, eh?**')
+    await message.channel.send('https://media.discordapp.net/attachments/803032257840676905/942231119737274388/alvie1sizetest2.gif')
+
+#if pinged
+  if client.user.mentioned_in(message):
+    await message.channel.send('Al-V at your service, mortal!')
+
+#tests
+  if message.content == "hi!":
+    await message.channel.send(f"hello, {message.author.name}!")
+
+  if message.content == "hack":
+    await message.channel.send("...")
+    dm = await message.author.create_dm() 
+    await dm.send("Why Hello There, I am in your computer, now!")
+    await dm.send('https://tenor.com/view/d20-critical-fail-dnd-gif-9046179')
+
+    #New yes no question
+  if "will i" in message.content:
+    item = random.choice(answer)
+    await message.channel.send(f"{item}")
+  if "can i" in message.content:
+    item = random.choice(answer)
+    await message.channel.send(f"{item}")
+  if "am i" in message.content:
+    item = random.choice(answer)
+    await message.channel.send(f"{item}")
+  if "is juice" in message.content:
+    item = random.choice(answer)
+    await message.channel.send(f"{item}")
+  if "is jinx" in message.content:
+    item = random.choice(answer)
+    await message.channel.send(f"{item}")
+  if "is alex" in message.content:
+    item = random.choice(answer)
+    await message.channel.send(f"{item}")
+  if "are u" in message.content:
+    item = random.choice(answer)
+    await message.channel.send(f"{item}")
+  if "did i" in message.content:
+    item = random.choice(answer)
+    await message.channel.send(f"{item}")
+  if "do i" in message.content:
+    item = random.choice(answer)
+    await message.channel.send(f"{item}") 
+  if "is " in message.content:
+    item = random.choice(answer)
+    await message.channel.send(f"{item}")
+  if "Is" in message.content:
+    item = random.choice(answer)
+    await message.channel.send(f"{item}")
+
+answer = ["yes", "no???"]	
+item = random.choice(answer)	
+
+
+  
+
+client.run(os.getenv('TOKEN'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#OTHER TAB
+
+from flask import Flask
+from threading import Thread
+
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "I'm alive"
+
+def run():
+  app.run(host='0.0.0.0',port=8080)
+
+def keep_alive():
+    t = Thread(target=run)
+    t.start()
+
+   
+
+
+  
